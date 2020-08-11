@@ -1,3 +1,7 @@
+$bg-color: #fff;
+$primary-color: #444;
+$secondary-color: #ccc;
+
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +13,7 @@
 }
 
 body {
+    color: $bg-color;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -17,14 +22,15 @@ body {
 }
 
 h1 {
-    color: #444;
+    color: $primary-color;
+    text-align: center;
     text-transform: uppercase;
     font-size: 6.4rem;
     font-weight: 800;
 }
 
 p {
-    color: #cccccc;
+    color: $secondary-color;
     font-size: 1.6rem;
 }
 
@@ -33,4 +39,10 @@ p {
     bottom: 20px;
 
     font-size: 1.2rem;
+}
+
+@media screen and (max-width: 600px) {
+    :root {
+        font-size: 7.5px;
+    }
 }

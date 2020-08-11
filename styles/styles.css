@@ -9,6 +9,7 @@
 }
 
 body {
+  color: #fff;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -27,13 +28,14 @@ body {
 
 h1 {
   color: #444;
+  text-align: center;
   text-transform: uppercase;
   font-size: 6.4rem;
   font-weight: 800;
 }
 
 p {
-  color: #cccccc;
+  color: #ccc;
   font-size: 1.6rem;
 }
 
@@ -41,5 +43,11 @@ p {
   position: absolute;
   bottom: 20px;
   font-size: 1.2rem;
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    font-size: 7.5px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
