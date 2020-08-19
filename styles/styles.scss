@@ -11,7 +11,8 @@ $primary-color: #2F80ED;
 }
 
 .wrapper {
-    width: 1040px;
+    width: 80%;
+    max-width: 1040px;
     margin: 0 auto;
 }
 
@@ -84,6 +85,37 @@ h2 {
     text-align: right;
 }
 
-@media screen and (max-width: 1040px) {
-    
+@media screen and (max-width: 1000px) {
+    header {
+        .wrapper {
+            height: unset;
+            flex-direction: column-reverse;
+        }
+
+        ul {
+            li {
+                display: block;
+                text-align: center;
+                margin-bottom: 20px;
+                margin-right: 0;
+            }
+        }
+    }
+
+    #links {
+        margin: 20px 0 40px 0;
+        margin-left: 0;
+    }
+
+    .icon {
+        margin-left: 0;
+    }
+
+    h1 {
+        font-size: 3.6rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
 }
