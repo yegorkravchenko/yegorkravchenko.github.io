@@ -4,7 +4,94 @@
 }
 
 :root {
-  font-family: system-ui;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   font-size: 10px;
+}
+
+.wrapper {
+  width: 1040px;
+  margin: 0 auto;
+}
+
+nav {
+  display: inline;
+}
+
+header .wrapper {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header ul {
+  display: inline;
+  list-style-type: none;
+}
+
+header ul li {
+  display: inline-block;
+  margin-right: 80px;
+}
+
+header ul li a {
+  color: #000;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+header ul li a:hover {
+  color: #2F80ED;
+}
+
+#links {
+  display: inline;
+  margin-left: auto;
+}
+
+.icon {
+  height: 24px;
+  margin-left: 40px;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: calc(100vh - 100px);
+}
+
+.bold {
+  color: #2F80ED;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 6.4rem;
+  font-weight: 600;
+}
+
+h2 {
+  margin-top: 45px;
+  font-size: 3.2rem;
+  font-weight: 600;
+  text-align: right;
 }
 /*# sourceMappingURL=styles.css.map */
