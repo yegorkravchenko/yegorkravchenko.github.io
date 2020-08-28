@@ -6,6 +6,8 @@
 :root {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   font-size: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
@@ -41,7 +43,24 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #2F80ED;
+  color: #0971f1;
+}
+
+#contact-me {
+  background-color: #0971f1;
+  border-radius: 100px;
+  color: white;
+  padding: .5rem 1rem;
+}
+
+#contact-me i {
+  margin-left: 5px;
+}
+
+#contact-me:hover {
+  background-color: #0865d8;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
 #social-icons {
@@ -53,7 +72,7 @@ nav ul li a:hover {
 }
 
 .icon:hover {
-  fill: #2F80ED;
+  fill: #0971f1;
 }
 
 main {
@@ -71,7 +90,7 @@ main {
 }
 
 .blue-text {
-  color: #2F80ED;
+  color: #0971f1;
   font-weight: 700;
 }
 
