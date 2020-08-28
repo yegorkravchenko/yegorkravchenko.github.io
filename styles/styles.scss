@@ -83,14 +83,35 @@ nav {
 
 #social-icons {
     margin-left: auto;
+
+    a {
+        position: relative;
+
+        &::after {
+            content: '';
+            border: 2px solid $primary-color;
+            border-radius: 100%;
+    
+            height: 32px;
+            width: 32px;
+    
+            position: absolute;
+            top: -20px;
+            left: 34px;
+
+            transition: transform .5s;
+            transform: scale(0);
+        }
+
+        &:hover::after {
+            transform: scale(1);
+        }
+    }
 }
 
 .icon {
     margin-left: 40px;
-
-    &:hover {
-        fill: $primary-color;
-    }
+    position: relative;
 }
 
 main {
