@@ -33,13 +33,32 @@ nav {
             margin-right: 80px;
 
             a {
+                position: relative;
                 color: black;
                 font-size: 1.4rem;
                 font-weight: 700;
                 text-decoration: none;
+                transition: .5s;
 
-                &:hover {
-                    color: $primary-color;
+                &:not(#contact-me)::after {
+                    content: '';
+                    background-color: $primary-color;
+
+                    height: 2px;
+                    width: 100%;
+
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+
+                    transition: transform .5s;
+                    transform: scaleX(0);
+                    transform-origin: right;
+                }
+
+                &:not(#contact-me):hover::after {
+                    transform: scaleX(1);
+                    transform-origin: left;
                 }
             }
         }
