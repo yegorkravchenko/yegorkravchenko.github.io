@@ -4,10 +4,22 @@
 }
 
 :root {
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
   font-size: 10px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body::before {
+  content: 'Work in progress...';
+  position: absolute;
+  background-color: #fff;
+  font-size: 6.4rem;
+  font-weight: 700;
+  padding: 150px 0 0 250px;
+  width: calc(100vw - 250px);
+  height: calc(100vh - 150px);
+  z-index: 2;
 }
 
 .container {
@@ -18,64 +30,85 @@
 
 header {
   height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 nav ul {
   list-style-type: none;
 }
+
 nav ul li {
   display: inline;
   margin-right: 80px;
 }
+
 nav ul li a {
   position: relative;
   color: black;
   font-size: 1.4rem;
   font-weight: 700;
   text-decoration: none;
-  transition: 0.5s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
+
 nav ul li a:not(#contact-me)::after {
-  content: "";
+  content: '';
   background-color: #0971f1;
   height: 2px;
   width: 100%;
   position: absolute;
   top: 100%;
   left: 0;
-  transition: transform 0.5s;
-  transform: scaleX(0);
-  transform-origin: right;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
 }
+
 nav ul li a:not(#contact-me):hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
 }
 
 #contact-me {
   background-color: #0971f1;
   border-radius: 100px;
   color: white;
-  padding: 0.5rem 1rem;
+  padding: .5rem 1rem;
 }
+
 #contact-me i {
   margin-left: 5px;
 }
+
 #contact-me:hover {
   background-color: #0865d8;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 #social-icons {
   margin-left: auto;
 }
+
 #social-icons a {
   position: relative;
 }
+
 #social-icons a::after {
-  content: "";
+  content: '';
   border: 2px solid #0971f1;
   border-radius: 100%;
   height: 32px;
@@ -83,11 +116,17 @@ nav ul li a:not(#contact-me):hover::after {
   position: absolute;
   top: -20px;
   left: 34px;
-  transition: transform 0.5s;
-  transform: scale(0);
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
+
 #social-icons a:hover::after {
-  transform: scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .icon {
@@ -97,9 +136,16 @@ nav ul li a:not(#contact-me):hover::after {
 
 main {
   min-height: calc(100vh - 100px);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .blue-text {
@@ -124,46 +170,44 @@ h2 {
     width: 90%;
   }
 }
+
 @media screen and (max-width: 700px) {
   .container {
     width: 90%;
   }
-
   header {
     height: unset;
-    flex-direction: column-reverse;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-
   nav ul li {
     display: block;
     text-align: center;
     margin: 20px 0 0 0;
   }
-
   #social-icons {
     margin: 20px 0 20px 0;
   }
   #social-icons a:nth-child(2) {
     margin: 0 20px;
   }
-
   .icon {
     margin: 0;
   }
-
   main {
     min-height: 100%;
     margin-top: 40%;
   }
-
   h1 {
     font-size: 3.2rem;
   }
-
   h2 {
     font-size: 1.8rem;
   }
 }
-
 /*# sourceMappingURL=styles.css.map */
