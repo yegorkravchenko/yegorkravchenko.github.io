@@ -1,3 +1,3 @@
-# My personal webpage: yegorkravchenko.github.io
+# yegorkravchenko.github.io
 
 Work in progress...
